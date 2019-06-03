@@ -19,19 +19,16 @@ public class Account {
 	String firstName;
 	String lastName;
 	int accountNumber;
-	
-	
+		
 	public Account() {
 
 	}
-	 
-	@Override
-	public String toString() {
-		return "Account [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", accountNumber="
-				+ accountNumber + "]";
+	
+	public Account(String firstName, String lastName, int accountNumber) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.accountNumber = accountNumber;
 	}
-
-
 
 	public int getId() {
 		return id;
