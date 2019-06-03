@@ -9,8 +9,7 @@ This is a 4 part piece in which I go through:
 
 ## What's in this chapter?
 
-- [How to add Entities to a database using JPA](https://github.com/christophperrins/JPA-with-SE/tree/master/AddingAccountToDatabase)
-- [How to build relationships between entities using JPA](https://github.com/christophperrins/JPA-with-SE/tree/master/AddingAccountWithTasks)
+- [How to add Entities to a database using JPA](https://github.com/christophperrins/JPA-with-SE/tree/AddingToDatabase/AddingAccountToDatabase)
 - Where to place the persistence.xml
 
 ## Prerequisite 
