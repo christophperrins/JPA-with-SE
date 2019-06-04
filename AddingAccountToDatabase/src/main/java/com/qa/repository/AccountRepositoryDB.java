@@ -36,11 +36,11 @@ public class AccountRepositoryDB implements AccountRepository{
 		
 	public Account updateAccount(int dbId, Account newInfo) {
 		Account savedAccount = getOne(dbId);
-		System.out.println(savedAccount.getFirstName());
-		System.out.println(newInfo.getFirstName());
+		transaction.begin();
 		savedAccount.setFirstName(newInfo.getFirstName());
 		savedAccount.setLastName(newInfo.getLastName());
 		savedAccount.setAccountNumber(newInfo.getAccountNumber());
+		transaction.commit();
 		return savedAccount;
 	}
 
