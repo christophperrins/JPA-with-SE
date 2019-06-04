@@ -36,7 +36,23 @@ public class AccountTest {
 		assertEquals(0, account.getId());
 		repositoryDB.add(account);
 		int id = account.getId();
-		assertFalse("account id not given -> not persisted to database", account.getId() == 0);
+		assertFalse("account id not given -> not persisted to database", id == 0);
+	}
+	
+	@Test
+	public void findAccount() {
+		repositoryDB.add(account);
+		Account returned = repositoryDB.getOne(account.getId());
+		assertEquals("Name of returned not the same as saved", account.getFirstName(), returned.getFirstName());
+	}
+	
+	@Test
+	public void findAllAccounts() {
+		int presize = repositoryDB.getAll().size();
+		repositoryDB.add(account);
+		repositoryDB.add(new Account("Corzaon", "Gaza", 125));
+		int postsize = repositoryDB.getAll().size();
+		assertEquals("FindAll Accounts not returning", presize + 2, postsize);
 	}
 	
 	@Test
