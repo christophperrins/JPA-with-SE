@@ -43,7 +43,7 @@ public class AccountTest {
 	public void findAccount() {
 		repositoryDB.add(account);
 		Account returned = repositoryDB.getOne(account.getId());
-		assertEquals("Name of returned not the same as saved", account.getFirstName(), returned.getFirstName());
+		assertEquals("Name of returned not the same as saved", account, returned);
 	}
 	
 	@Test
